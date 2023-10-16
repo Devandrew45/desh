@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">desh</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hello_welcome_back">Hello Welcome Back</string>
+    <string name="sign_in_disc"><![CDATA[Welcome in Desh & Dez App,Enter your data to enjoy our services.]]></string>
+    <string name="enter_your_email">Enter your email</string>
+    <string name="enter_your_password">Enter your password</string>
+    <string name="mail">Mail</string>
+    <string name="password">Password</string>
+    <string name="sign_in">Sign In</string>
+    <string name="remember_me">Remember me</string>
+    <string name="forget_password">Forget Password?</string>
+    <string name="send_code">Send code</string>
+    <string name="or">OR</string>
+    <string name="phone">Phone</string>
+    <string name="enter_your_phone">Enter your phone</string>
+    <string name="confirm">Confirm</string>
+    <string name="new_password">New Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="you_don_t_have_an_account">You don\'t have an account ?</string>
+    <string name="create_account">Create Account</string>
+    <string name="hello_welcome">Hello Welcome</string>
+    <string name="welcome_please_enter_your_data_to_create_your_account">Welcome please enter your data to create your account</string>
+    <string name="enter_your_name">Enter your Name</string>
+    <string name="name">Name</string>
+    <string name="title">Title</string>
+    <string name="enter_your_title">Enter your title</string>
+    <string name="please_select_a_verification_process">Please select a verification process</string>
+    <string name="please_check_your_phone_sms">Please check your phone SMS</string>
+    <string name="please_check_your_mail_inbox">Please check your mail inbox</string>
+    <string name="try_again">"Try again in "</string>
+</resources>

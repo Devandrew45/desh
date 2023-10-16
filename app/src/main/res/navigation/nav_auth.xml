@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_auth"
+    app:startDestination="@id/singInFragment">
+
+    <fragment
+        android:id="@+id/singInFragment"
+        android:name="com.example.desh.SingInFragment"
+        android:label="fragment_sing_in"
+        tools:layout="@layout/fragment_sing_in" >
+        <action
+            android:id="@+id/action_singInFragment_to_forgetPasswordFragment"
+            app:destination="@id/forgetPasswordFragment"
+            app:enterAnim="@anim/anim_slide_in"
+            app:exitAnim="@anim/anim_alpha_out"
+            app:popEnterAnim="@anim/anim_alpha_in"
+            app:popExitAnim="@anim/anim_slide_out"/>
+        <action
+            android:id="@+id/action_singInFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/forgetPasswordFragment"
+        android:name="com.example.desh.ForgetPasswordFragment"
+        android:label="fragment_forget_password"
+        tools:layout="@layout/fragment_forget_password" >
+        <action
+            android:id="@+id/action_forgetPasswordFragment_to_confirmNewPassword"
+            app:destination="@id/confirmNewPassword"
+            app:enterAnim="@anim/anim_slide_in"
+            app:exitAnim="@anim/anim_alpha_out"
+            app:popEnterAnim="@anim/anim_alpha_in"
+            app:popExitAnim="@anim/anim_slide_out"/>
+        <argument
+            android:name="VerifyType"
+            app:argType="com.example.desh.utils.VerificationType" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/confirmNewPassword"
+        android:name="com.example.desh.ConfirmNewPassword"
+        tools:layout="@layout/confirm_password"
+        android:label="ConfirmNewPassword" />
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="com.example.desh.SignUpFragment"
+        android:label="fragment_sign_up"
+        app:enterAnim="@anim/anim_slide_in"
+        app:exitAnim="@anim/anim_alpha_out"
+        app:popEnterAnim="@anim/anim_alpha_in"
+        app:popExitAnim="@anim/anim_slide_out"
+        tools:layout="@layout/fragment_sign_up" />
+
+</navigation>

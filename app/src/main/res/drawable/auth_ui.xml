@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/shadow_182250" />
+    <item>
+        <shape>
+            <corners android:topRightRadius="@dimen/_30sdp"
+                android:topLeftRadius="@dimen/_30sdp"/>
+            <gradient android:angle="380"
+                android:startColor="@color/dark_purple"
+                android:centerColor="@color/dark_purple"
+                android:color="@color/light_purple"/>
+        </shape>
+    </item>
+
+</layer-list>
+
