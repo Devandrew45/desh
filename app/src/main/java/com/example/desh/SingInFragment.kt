@@ -27,6 +27,7 @@ class SingInFragment : Fragment() {
 
         }
 
+
         val signup = view.findViewById<TextView>(R.id.btn_create_acc)
         signup.setOnClickListener {
             findNavController().navigate(R.id.action_singInFragment_to_signUpFragment)

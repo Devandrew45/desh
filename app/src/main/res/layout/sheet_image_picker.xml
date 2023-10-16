@@ -32,9 +32,12 @@
             android:id="@+id/albums_spinner"
             android:layout_width="@dimen/_150sdp"
             android:layout_height="match_parent"
-            android:layout_margin="@dimen/_5sdp"
             android:layout_alignParentTop="true"
             android:layout_alignParentBottom="true"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
             android:layout_toEndOf="@+id/imageButton" />
 
     </RelativeLayout>

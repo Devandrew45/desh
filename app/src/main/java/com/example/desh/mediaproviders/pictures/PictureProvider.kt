@@ -14,6 +14,17 @@ import kotlinx.coroutines.launch
 @SuppressLint("InlinedApi")
 class PictureProvider(private val contentResolver: ContentResolver) {
 
+    internal fun Cursor.doWhile(action: () -> Unit) {
+        this.use {
+            if (this.moveToFirst()) {
+                do {
+                    action()
+                } while (this.moveToNext())
+            }
+        }
+    }
+
+
     private val data = MediaStore.Images.Media.DATA
     private val displayName = MediaStore.Images.Media.DISPLAY_NAME
     private val size = MediaStore.Images.Media.SIZE
@@ -27,9 +38,42 @@ class PictureProvider(private val contentResolver: ContentResolver) {
 
     private val externalContentUri = MediaStore.Images.Media.EXTERNAL_CONTENT_URI
     private val internalContentUri = MediaStore.Images.Media.INTERNAL_CONTENT_URI
-
     private var cursor: Cursor? = null
 
+
+    fun loadAlbums(): ArrayList<AlbumItem> {
+        val albumCursor = contentResolver.query(
+            externalContentUri,
+            arrayOf(albumBucketName ,MediaStore.Images.ImageColumns.BUCKET_ID),
+            null,
+            null,
+            MediaStore.Images.Media.DATE_TAKEN + " DESC"
+        )
+
+        val list = arrayListOf<AlbumItem>()
+        try {
+            list.add(AlbumItem("All", true,"0"))
+            if (albumCursor == null) {
+                return list
+            }
+            albumCursor.doWhile {
+                val bucketId = albumCursor.getString(albumCursor.getColumnIndex(MediaStore.Images.ImageColumns.BUCKET_ID))
+                val name = albumCursor.getString(albumCursor.getColumnIndex(albumBucketName)) ?: bucketId
+                var albumItem = AlbumItem(name, false, bucketId)
+                if (!list.contains(albumItem)) {
+                    list.add(albumItem)
+                }
+            }
+        } finally {
+            if (albumCursor != null && !albumCursor.isClosed) {
+                albumCursor.close()
+            }
+        }
+        return list
+    }
+
+
+/*
     suspend fun loadAlbums(): ArrayList<AlbumItem> {
 
         val albumItems = arrayListOf<AlbumItem>()
@@ -67,6 +111,7 @@ class PictureProvider(private val contentResolver: ContentResolver) {
         }
         return albumItems
     }
+*/
 
     /**Returns an ArrayList of [PictureContent]   */
     fun getAllPictureContents(contentLocation: Uri?): ArrayList<PictureContent> {
