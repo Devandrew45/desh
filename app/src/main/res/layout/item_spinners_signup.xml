@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_31sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:weightSum="3"
+        android:background="@drawable/social_drop_down_background"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/social_selcted_icon"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:padding="@dimen/_7sdp"
+            android:layout_gravity="start"
+            android:layout_weight="0.6"
+            app:srcCompat="@drawable/_icon__instagram_icon_" />
+
+        <EditText
+            android:id="@+id/editTextText"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.8"
+            android:ems="10"
+            android:textColorHint="@color/text_hint"
+            android:textSize="@dimen/_12ssp"
+            android:background="#525252"
+            android:layout_marginTop="@dimen/_1sdp"
+            android:layout_marginBottom="@dimen/_1sdp"
+            android:inputType="text"
+            android:fontFamily="@font/roboto_medium"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:hint="@string/enter_the_links_here" />
+
+        <ImageButton
+            android:id="@+id/arrow_btn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:src="@drawable/arrow_down"
+            android:background="?selectableItemBackgroundBorderless" />
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/social_list"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_45sdp"
+        app:spanCount="1"
+        tools:itemCount="5"
+        android:visibility="gone"
+        android:scrollbars="horizontal"
+        android:fadeScrollbars="false"
+        android:scrollbarAlwaysDrawHorizontalTrack="true"
+        android:scrollbarThumbHorizontal="@drawable/social_list_scrollbar"
+        android:scrollbarSize="12dp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:background="@drawable/social_list_background"
+        tools:listitem="@layout/item_social_drop_down_list"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+</LinearLayout>

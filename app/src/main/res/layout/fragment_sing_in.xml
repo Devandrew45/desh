@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/ui_background"
-    tools:context=".SingInFragment">
+    tools:context=".presentation.ui.SingInFragment">
 
     <!-- <ScrollView
          android:id="@+id/scrollView2"
@@ -57,12 +57,10 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/roboto_medium"
         android:text="@string/hello_welcome_back"
-        android:textAlignment="center"
+        android:gravity="center"
         android:textColor="@color/white"
         android:textSize="@dimen/_16ssp"
         android:visibility="visible"
-        app:layout_constraintDimensionRatio="1.1"
-
         app:layout_constraintEnd_toStartOf="@+id/guideline4"
         app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
@@ -72,13 +70,12 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/_6sdp"
         android:alpha="0.7"
-        android:fontFamily="@font/roboto_medium"
+        android:gravity="center"
+        android:lineSpacingExtra="2dp"
+        android:padding="@dimen/_12sdp"
         android:text="@string/sign_in_disc"
-        android:textAlignment="center"
         android:textColor="@color/white"
-        android:textSize="@dimen/_14ssp"
-        android:visibility="visible"
-        app:layout_constraintDimensionRatio="1.1"
+        android:textSize="@dimen/_12ssp"
         app:layout_constraintEnd_toStartOf="@+id/guideline4"
         app:layout_constraintStart_toStartOf="@+id/guideline"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />

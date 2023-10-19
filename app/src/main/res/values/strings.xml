@@ -30,4 +30,9 @@
     <string name="please_check_your_phone_sms">Please check your phone SMS</string>
     <string name="please_check_your_mail_inbox">Please check your mail inbox</string>
     <string name="try_again">"Try again in "</string>
+    <string name="enter_your_cover_here_and_music_profile_intro">Enter your Cover here and music profile intro</string>
+    <string name="enter_the_links_here">Enter the links here</string>
+    <string name="social_media">Social media</string>
+    <string name="brief">Brief</string>
+    <string name="enter_a_brief_summary_of_yourself_here">Enter a brief summary of yourself here</string>
 </resources>

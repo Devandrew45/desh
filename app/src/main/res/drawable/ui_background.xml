@@ -1,12 +1,21 @@
-<?xml version="1.0" encoding="utf-8"?>
-<shape xmlns:android="http://schemas.android.com/apk/res/android">
-
-    <gradient
-        android:type="linear"
-        android:startColor="@color/dark_purple"
-        android:endColor="@color/light_purple"
-        android:centerColor="@color/dark_purple"
-        android:angle="380"
-        />
-
-</shape>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="428dp"
+    android:height="926dp"
+    android:viewportWidth="428"
+    android:viewportHeight="926">
+  <path
+      android:pathData="M0,0h428v926h-428z">
+    <aapt:attr name="android:fillColor">
+      <gradient 
+          android:startX="113.88"
+          android:startY="395"
+          android:endX="425.12"
+          android:endY="927.68"
+          android:type="linear">
+        <item android:offset="0" android:color="#FF05081A"/>
+        <item android:offset="1" android:color="#FF201942"/>
+      </gradient>
+    </aapt:attr>
+  </path>
+</vector>

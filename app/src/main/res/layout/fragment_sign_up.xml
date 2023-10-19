@@ -5,25 +5,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/ui_background"
-    tools:context=".SignUpFragment">
+    tools:context=".presentation.ui.SignUpFragment">
 
     <com.google.android.material.appbar.MaterialToolbar
-        android:id="@+id/sign_in_tb"
-        android:layout_width="match_parent"
-        android:layout_height="?actionBarSize"
-        android:minHeight="?attr/actionBarSize"
-        app:navigationIcon="@drawable/back_arrow"
+        android:id="@+id/sign_up_tb"
+        style="@style/toolbarStyle"
         app:title="Sign up"
-        app:titleCentered="true"
-        app:titleTextAppearance="@style/TextAppearance.AppCompat.Large"
         app:titleTextColor="@color/white" />
-
 
     <ScrollView
         android:id="@+id/scrollView2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/sign_in_tb"
+        android:layout_below="@+id/sign_up_tb"
         android:layout_centerHorizontal="true"
         android:scrollbars="none"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -41,7 +35,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_90sdp"
                 android:importantForAccessibility="no"
-                android:padding="@dimen/_15sdp"
+                android:padding="@dimen/_10sdp"
                 android:src="@drawable/desh_n_dez_logo_1"
                 android:textAlignment="center"
                 android:visibility="visible"
@@ -57,6 +51,7 @@
                 android:fontFamily="@font/roboto_medium"
                 android:text="@string/hello_welcome"
                 android:textAlignment="center"
+                android:gravity="center"
                 android:textColor="@color/white"
                 android:textSize="@dimen/_16ssp"
                 android:visibility="visible"
@@ -73,6 +68,7 @@
                 android:fontFamily="@font/roboto_medium"
                 android:text="@string/welcome_please_enter_your_data_to_create_your_account"
                 android:textAlignment="center"
+                android:gravity="center"
                 android:textColor="@color/white"
                 android:textSize="@dimen/_12ssp"
                 android:visibility="visible"
@@ -133,22 +129,48 @@
                 android:orientation="horizontal"
                 app:layout_constraintGuide_begin="0dp" />
 
-            <ImageView
+
+            <com.makeramen.roundedimageview.RoundedImageView
                 android:id="@+id/imageView4"
                 android:layout_width="match_parent"
                 android:layout_height="515.05dp"
-                android:layout_margin="@dimen/_8sdp"
-                android:src="@drawable/upload_cover_background"
+                android:layout_margin="@dimen/_12sdp"
+                android:background="@color/shadow"
+                android:scaleType="center"
                 app:layout_constraintDimensionRatio="1.1"
                 app:layout_constraintEnd_toStartOf="@+id/guideline4"
                 app:layout_constraintStart_toStartOf="@+id/guideline"
-                app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+                app:layout_constraintTop_toBottomOf="@+id/imageView3"
+                app:riv_border_color="@color/yellow"
+                app:riv_border_width="1dip"
+                app:riv_corner_radius="@dimen/_25sdp"
+                app:riv_mutate_background="true"
+                app:riv_tile_mode="repeat" />
+
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/profile_image"
+                android:layout_width="@dimen/_70sdp"
+                android:layout_height="@dimen/_70sdp"
+                android:background="@color/text_hint"
+                android:scaleType="center"
+                app:layout_constraintBottom_toBottomOf="@+id/tx_mail"
+                app:layout_constraintDimensionRatio="1.1"
+                app:layout_constraintEnd_toStartOf="@+id/guideline4"
+                app:layout_constraintStart_toStartOf="@+id/guideline"
+                app:layout_constraintTop_toBottomOf="@+id/guideline6"
+                app:layout_constraintVertical_bias="1.0"
+                app:riv_border_color="@color/yellow"
+                app:riv_border_width="2dip"
+                app:riv_corner_radius="@dimen/_40sdp"
+                app:riv_mutate_background="true"
+                app:riv_tile_mode="repeat" />
 
             <TextView
                 android:id="@+id/tx_mail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_4sdp"
                 android:fontFamily="@font/roboto_medium"
                 android:paddingStart="@dimen/_20sdp"
                 android:paddingEnd="@dimen/_17sdp"
@@ -158,7 +180,7 @@
                 app:layout_constraintDimensionRatio="1.1"
                 app:layout_constraintEnd_toStartOf="@+id/guideline4"
                 app:layout_constraintStart_toStartOf="@+id/guideline"
-                app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+                app:layout_constraintTop_toBottomOf="@+id/profile_image" />
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/name_tx_input"
@@ -176,6 +198,7 @@
                     style="@style/EditTextStyle"
                     android:hint="@string/enter_your_name" />
             </com.google.android.material.textfield.TextInputLayout>
+
 
             <TextView
                 android:id="@+id/textView5"
@@ -209,6 +232,120 @@
                     style="@style/EditTextStyle"
                     android:hint="@string/enter_your_title" />
             </com.google.android.material.textfield.TextInputLayout>
+
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:clickable="false"
+                android:drawableTop="@drawable/ico_plus"
+                android:drawablePadding="@dimen/_10sdp"
+                android:focusable="false"
+                android:fontFamily="@font/roboto_medium"
+                android:text="@string/enter_your_cover_here_and_music_profile_intro"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+                app:layout_constraintEnd_toStartOf="@+id/guideline4"
+                app:layout_constraintStart_toStartOf="@+id/guideline"
+                app:layout_constraintTop_toTopOf="@+id/imageView4" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_begin="745dp" />
+
+
+            <TextView
+                android:id="@+id/textBreif"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:fontFamily="@font/roboto_medium"
+                android:paddingStart="@dimen/_20sdp"
+                android:paddingEnd="@dimen/_17sdp"
+                android:text="@string/brief"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintDimensionRatio="1.1"
+                app:layout_constraintEnd_toStartOf="@+id/guideline4"
+                app:layout_constraintStart_toStartOf="@+id/guideline"
+                app:layout_constraintTop_toBottomOf="@+id/title_tx_input" />
+
+
+            <EditText
+                android:id="@+id/brief_tx_input"
+                style="@style/EditTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_150sdp"
+                android:textSize="@dimen/_14ssp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginStart="@dimen/_14sdp"
+                android:layout_marginEnd="@dimen/_14sdp"
+                android:background="@drawable/upload_cover_base"
+                android:hint="@string/enter_a_brief_summary_of_yourself_here"
+                android:gravity="top"
+                android:padding="@dimen/_10sdp"
+                android:visibility="visible"
+                app:layout_constraintDimensionRatio="1.1"
+                app:layout_constraintEnd_toStartOf="@+id/guideline4"
+                app:layout_constraintStart_toStartOf="@+id/guideline"
+                app:layout_constraintTop_toBottomOf="@+id/textBreif">
+
+            </EditText>
+
+
+            <TextView
+                android:id="@+id/text_social"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:fontFamily="@font/roboto_medium"
+                android:paddingStart="@dimen/_20sdp"
+                android:paddingEnd="@dimen/_17sdp"
+                android:text="@string/social_media"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintDimensionRatio="1.1"
+                app:layout_constraintEnd_toStartOf="@+id/guideline4"
+                app:layout_constraintStart_toStartOf="@+id/guideline"
+                app:layout_constraintTop_toBottomOf="@+id/brief_tx_input" />
+
+            <com.example.desh.presentation.view.socialdropdown.SocialMediaSpinnerView
+                android:id="@+id/social_media_drop_down1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_2sdp"
+                android:layout_marginEnd="@dimen/_2sdp"
+                app:layout_constraintDimensionRatio="1.1"
+                app:layout_constraintEnd_toStartOf="@+id/guideline4"
+                app:layout_constraintStart_toStartOf="@+id/guideline"
+                app:layout_constraintTop_toBottomOf="@+id/text_social" />
+
+            <com.example.desh.presentation.view.socialdropdown.SocialMediaSpinnerView
+                android:id="@+id/social_media_drop_down2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_2sdp"
+                android:layout_marginEnd="@dimen/_2sdp"
+                app:layout_constraintDimensionRatio="1.1"
+                app:layout_constraintEnd_toStartOf="@+id/guideline4"
+                app:layout_constraintStart_toStartOf="@+id/guideline"
+                app:layout_constraintTop_toBottomOf="@+id/social_media_drop_down1" />
+
+            <com.example.desh.presentation.view.socialdropdown.SocialMediaSpinnerView
+                android:id="@+id/social_media_drop_down3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_2sdp"
+                android:layout_marginEnd="@dimen/_2sdp"
+                app:layout_constraintDimensionRatio="1.1"
+                app:layout_constraintEnd_toStartOf="@+id/guideline4"
+                app:layout_constraintStart_toStartOf="@+id/guideline"
+                app:layout_constraintTop_toBottomOf="@+id/social_media_drop_down2" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>

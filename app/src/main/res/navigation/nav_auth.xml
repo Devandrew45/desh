@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/singInFragment"
-        android:name="com.example.desh.SingInFragment"
+        android:name="com.example.desh.presentation.ui.SingInFragment"
         android:label="fragment_sing_in"
         tools:layout="@layout/fragment_sing_in" >
         <action
@@ -17,13 +17,19 @@
             app:exitAnim="@anim/anim_alpha_out"
             app:popEnterAnim="@anim/anim_alpha_in"
             app:popExitAnim="@anim/anim_slide_out"/>
+
         <action
             android:id="@+id/action_singInFragment_to_signUpFragment"
-            app:destination="@id/signUpFragment" />
+            app:destination="@id/signUpFragment"
+            app:enterAnim="@anim/anim_slide_in"
+            app:exitAnim="@anim/anim_alpha_out"
+            app:popEnterAnim="@anim/anim_alpha_in"
+            app:popExitAnim="@anim/anim_slide_out"/>
+
     </fragment>
     <fragment
         android:id="@+id/forgetPasswordFragment"
-        android:name="com.example.desh.ForgetPasswordFragment"
+        android:name="com.example.desh.presentation.ui.ForgetPasswordFragment"
         android:label="fragment_forget_password"
         tools:layout="@layout/fragment_forget_password" >
         <action
@@ -35,22 +41,19 @@
             app:popExitAnim="@anim/anim_slide_out"/>
         <argument
             android:name="VerifyType"
-            app:argType="com.example.desh.utils.VerificationType" />
+            app:argType="com.example.desh.domain.enums.VerificationType" />
     </fragment>
 
     <fragment
         android:id="@+id/confirmNewPassword"
-        android:name="com.example.desh.ConfirmNewPassword"
-        tools:layout="@layout/confirm_password"
+        android:name="com.example.desh.presentation.ui.NewPasswordFragment"
+        tools:layout="@layout/fragment_confirm_password"
         android:label="ConfirmNewPassword" />
+
     <fragment
         android:id="@+id/signUpFragment"
-        android:name="com.example.desh.SignUpFragment"
+        android:name="com.example.desh.presentation.ui.SignUpFragment"
         android:label="fragment_sign_up"
-        app:enterAnim="@anim/anim_slide_in"
-        app:exitAnim="@anim/anim_alpha_out"
-        app:popEnterAnim="@anim/anim_alpha_in"
-        app:popExitAnim="@anim/anim_slide_out"
         tools:layout="@layout/fragment_sign_up" />
 
 </navigation>

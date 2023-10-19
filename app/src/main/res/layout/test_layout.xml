@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/ui_background">
@@ -14,6 +15,7 @@
         android:background="@drawable/frame_background"
         android:hint="@string/enter_your_email"
         android:orientation="horizontal"
+        android:visibility="gone"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.484"
         app:layout_constraintStart_toStartOf="parent"
@@ -45,5 +47,26 @@
             android:textColorHint="@color/text_hint" />
 
     </LinearLayout>
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_380sdp"
+        android:scaleType="center"
+        app:riv_corner_radius="@dimen/_25sdp"
+        app:riv_border_width="2dip"
+        android:visibility="gone"
+        app:riv_border_color="@color/yellow"
+        app:riv_mutate_background="true"
+        android:background="@color/shadow"
+        app:riv_tile_mode="repeat"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="212dp"
+        tools:ignore="MissingConstraints" />
+
+
+    <com.example.desh.presentation.view.socialdropdown.SocialMediaSpinnerView
+        android:id="@+id/sv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

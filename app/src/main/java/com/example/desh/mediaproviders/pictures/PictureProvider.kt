@@ -5,8 +5,8 @@ import android.content.ContentResolver
 import android.database.Cursor
 import android.net.Uri
 import android.provider.MediaStore
-import com.example.desh.mediaproviders.pictures.module.AlbumItem
-import com.example.desh.mediaproviders.pictures.module.PictureContent
+import com.example.desh.mediaproviders.module.AlbumItem
+import com.example.desh.mediaproviders.module.PictureContent
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -14,7 +14,7 @@ import kotlinx.coroutines.launch
 @SuppressLint("InlinedApi")
 class PictureProvider(private val contentResolver: ContentResolver) {
 
-    internal fun Cursor.doWhile(action: () -> Unit) {
+    private fun Cursor.doWhile(action: () -> Unit) {
         this.use {
             if (this.moveToFirst()) {
                 do {
@@ -31,7 +31,7 @@ class PictureProvider(private val contentResolver: ContentResolver) {
     private val albumBucketName = MediaStore.Images.Media.BUCKET_DISPLAY_NAME
     private val albumBucketID = MediaStore.Images.Media.BUCKET_ID
     private val _ID = MediaStore.Images.Media._ID
-    private val dateTaken = MediaStore.Images.Media.DATE_TAKEN
+    private val dateTaken = MediaStore.Images.Media.DATE_ADDED
 
     private val projections =
         arrayOf(data, displayName, size, albumBucketName, albumBucketID, _ID, dateTaken)
