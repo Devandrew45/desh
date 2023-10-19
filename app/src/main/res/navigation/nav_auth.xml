@@ -54,6 +54,33 @@
         android:id="@+id/signUpFragment"
         android:name="com.example.desh.presentation.ui.SignUpFragment"
         android:label="fragment_sign_up"
-        tools:layout="@layout/fragment_sign_up" />
+        tools:layout="@layout/fragment_sign_up" >
+        <action
+            app:enterAnim="@anim/anim_slide_in"
+            app:exitAnim="@anim/anim_alpha_out"
+            app:popEnterAnim="@anim/anim_alpha_in"
+            app:popExitAnim="@anim/anim_slide_out"
+            android:id="@+id/action_signUpFragment_to_coverPickerFragment"
+            app:destination="@id/coverPickerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/coverPickerFragment"
+        android:name="com.example.desh.presentation.ui.imagepicker.CoverPickerFragment"
+        android:label="CoverPickerFragment"
+        tools:layout="@layout/fragment_choose_cover_picture">
+        <action
+            app:enterAnim="@anim/anim_slide_in"
+            app:exitAnim="@anim/anim_alpha_out"
+            app:popEnterAnim="@anim/anim_alpha_in"
+            app:popExitAnim="@anim/anim_slide_out"
+            android:id="@+id/action_coverPickerFragment_to_musicPickerFragment"
+            app:destination="@id/musicPickerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/musicPickerFragment"
+        android:name="com.example.desh.presentation.ui.musicpicker.MusicPickerFragment"
+        android:label="fragment_music_picker"
+        tools:layout="@layout/fragment_music_picker"
+        />
 
 </navigation>

@@ -8,6 +8,7 @@ import com.example.desh.mediaproviders.module.AlbumItem
 import com.example.desh.mediaproviders.module.PictureContent
 import kotlinx.coroutines.CoroutineStart
 import kotlinx.coroutines.cancel
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlin.coroutines.EmptyCoroutineContext
 
@@ -25,6 +26,7 @@ class PicturesViewModel(application: Application) : AndroidViewModel(application
 
     fun getPicturesByAlbum(bucketID: String) {
         viewModelScope.launch(EmptyCoroutineContext, CoroutineStart.DEFAULT) {
+            delay(1000L)
             picturesList.postValue(pictureProvider.getAllPictureContentByBucketID(bucketID))
         }
     }

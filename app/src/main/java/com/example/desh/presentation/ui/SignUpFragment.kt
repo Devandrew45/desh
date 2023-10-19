@@ -8,7 +8,6 @@ import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.example.desh.R
 import com.example.desh.databinding.FragmentSignUpBinding
-import com.example.desh.presentation.ui.imagepicker.ImagesPickerDialog
 
 class SignUpFragment : Fragment() {
 
@@ -30,9 +29,7 @@ class SignUpFragment : Fragment() {
             }
 
             imageView4.setOnClickListener {
-               val bottomSheetFragment = ImagesPickerDialog()
-
-                bottomSheetFragment.show(requireActivity().supportFragmentManager, "BSDialogFragment")
+                findNavController().navigate(SignUpFragmentDirections.actionSignUpFragmentToCoverPickerFragment())
             }
         }
     }

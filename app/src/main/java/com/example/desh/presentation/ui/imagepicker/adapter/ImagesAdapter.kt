@@ -42,7 +42,7 @@ class ImagesAdapter : ListAdapter<PictureContent, ImagesAdapter.ImageViewHolder>
                     .transition(DrawableTransitionOptions().crossFade())
                     .into(imageHolder)
 
-                checkear.isChecked = pictureContent.isSelected!!
+             /*   checkear.isChecked = pictureContent.isSelected!!
                 checkear.setOnCheckedChangeListener {_, isChecked ->
                     pictureContent.isSelected = isChecked
                     checkear.isChecked = isChecked
@@ -52,7 +52,7 @@ class ImagesAdapter : ListAdapter<PictureContent, ImagesAdapter.ImageViewHolder>
                     } else {
                         card.strokeWidth = 0
                     }
-                }
+                }*/
 
 
 
