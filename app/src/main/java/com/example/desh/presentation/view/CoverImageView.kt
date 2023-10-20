@@ -17,9 +17,8 @@ class CoverImageView : RelativeLayout {
 
     override fun onFinishInflate() {
         super.onFinishInflate()
-        binding = LayoutChooseCoverViewBinding.inflate(
-            android.view.LayoutInflater.from(context), this, true
-        )
+        binding = LayoutChooseCoverViewBinding.inflate(android.view.LayoutInflater.from(context), this, true)
+
     }
 
 }
