@@ -1,0 +1,36 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="15dp"
+    android:height="14dp"
+    android:viewportWidth="35"
+    android:viewportHeight="34">
+  <path
+      android:pathData="M17.5,14.5m-14.5,0a14.5,14.5 0,1 1,29 0a14.5,14.5 0,1 1,-29 0">
+    <aapt:attr name="android:fillColor">
+      <gradient 
+          android:startX="8.598"
+          android:startY="12.742"
+          android:endX="48.5"
+          android:endY="60.659"
+          android:type="linear">
+        <item android:offset="0" android:color="#FF06081B"/>
+        <item android:offset="1" android:color="#FF4B3675"/>
+      </gradient>
+    </aapt:attr>
+  </path>
+  <path
+      android:pathData="M17.5,14.5m-14.5,0a14.5,14.5 0,1 1,29 0a14.5,14.5 0,1 1,-29 0"
+      android:fillColor="#000000"
+      android:fillAlpha="0.2"/>
+  <path
+      android:pathData="M17.5,14.5m-13.775,0a13.775,13.775 0,1 1,27.55 0a13.775,13.775 0,1 1,-27.55 0"
+      android:strokeWidth="1.45"
+      android:fillColor="#00000000"
+      android:strokeColor="#FFB801"/>
+  <path
+      android:pathData="M21.5,10H21.246L20.154,8.584C19.869,8.217 19.431,8.002 18.966,8L17.034,8C16.569,8.002 16.131,8.217 15.846,8.584L14.754,10H14.5C13.12,10.002 12.002,11.12 12,12.5V17.5C12.002,18.88 13.12,19.998 14.5,20H21.5C22.88,19.998 23.998,18.88 24,17.5V12.5C23.998,11.12 22.88,10.002 21.5,10ZM16.638,9.195C16.733,9.072 16.879,9.001 17.034,9H18.966C19.121,9.001 19.267,9.073 19.362,9.195L19.983,10H16.017L16.638,9.195ZM23,17.5C23,18.328 22.328,19 21.5,19H14.5C13.672,19 13,18.328 13,17.5V12.5C13,11.672 13.672,11 14.5,11H21.5C22.328,11 23,11.672 23,12.5V17.5Z"
+      android:fillColor="#ffffff"/>
+  <path
+      android:pathData="M18,12C16.343,12 15,13.343 15,15C15,16.657 16.343,18 18,18C19.657,18 21,16.657 21,15C20.999,13.344 19.656,12.002 18,12ZM18,17C16.896,17 16,16.105 16,15C16,13.895 16.896,13 18,13C19.105,13 20,13.895 20,15C20,16.105 19.105,17 18,17Z"
+      android:fillColor="#ffffff"/>
+</vector>
