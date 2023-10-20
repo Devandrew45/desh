@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/frameLayout"
@@ -9,7 +8,15 @@
     android:background="@drawable/ui_background"
     tools:context=".presentation.ui.SingInFragment">
 
-
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:background="@color/dark_purple"
+        style="@style/toolbarStyle"
+        android:minHeight="?attr/actionBarSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="@string/sign_in" />
 
     <!-- <ScrollView
          android:id="@+id/scrollView2"
@@ -27,67 +34,72 @@
              android:layout_width="match_parent"
              android:layout_height="wrap_content">
  -->
-
+    <!--<com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/sign_in_tb"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:minHeight="?attr/actionBarSize"
+        app:layout_constraintEnd_toStartOf="@+id/guideline4"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="@string/sign_in"
+        app:titleCentered="true"
+        app:titleTextAppearance="@style/TextAppearance.AppCompat.Large"
+        app:titleTextColor="@color/white" />
+-->
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_100sdp"
+        android:layout_height="@dimen/_120sdp"
         android:importantForAccessibility="no"
         android:padding="@dimen/_15sdp"
         android:src="@drawable/desh_n_dez_logo_1"
         android:textAlignment="center"
         android:visibility="visible"
-        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        app:layout_constraintDimensionRatio="1.1"
         app:layout_constraintEnd_toStartOf="@+id/guideline4"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toBottomOf="@+id/guideline5"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@id/guideline5" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fontFamily="@font/roboto_medium"
-        android:gravity="center"
         android:text="@string/hello_welcome_back"
+        android:gravity="center"
         android:textColor="@color/white"
         android:textSize="@dimen/_16ssp"
         android:visibility="visible"
-        app:layout_constraintBottom_toTopOf="@+id/guideline3"
         app:layout_constraintEnd_toStartOf="@+id/guideline4"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2"
-        app:layout_constraintVertical_bias="0.0" />
-
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
     <TextView
         android:id="@+id/textView4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/_20sdp"
         android:layout_marginTop="@dimen/_6sdp"
-        android:layout_marginEnd="@dimen/_20sdp"
         android:alpha="0.7"
         android:gravity="center"
         android:lineSpacingExtra="2dp"
+        android:padding="@dimen/_12sdp"
         android:text="@string/sign_in_disc"
         android:textColor="@color/white"
         android:textSize="@dimen/_12ssp"
-        app:layout_constraintBottom_toTopOf="@+id/guideline3"
         app:layout_constraintEnd_toStartOf="@+id/guideline4"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
 
     <ImageView
         android:id="@+id/imageView5"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_15sdp"
         android:scaleType="fitXY"
         android:src="@drawable/auth_ui"
         android:visibility="visible"
+        app:layout_constraintDimensionRatio="1.1"
+
         app:layout_constraintEnd_toStartOf="@+id/guideline4"
         app:layout_constraintStart_toStartOf="@+id/guideline"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
@@ -96,29 +108,30 @@
         android:id="@+id/imageView3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_margin="@dimen/_5sdp"
         android:src="@drawable/desh_n_dez_logo_2"
+        app:layout_constraintDimensionRatio="1.1"
+
         app:layout_constraintEnd_toStartOf="@+id/guideline4"
         app:layout_constraintStart_toStartOf="@+id/guideline"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
-
 
     <TextView
         android:id="@+id/txt_mail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fontFamily="@font/roboto_medium"
-        android:paddingStart="@dimen/_25sdp"
-        android:paddingEnd="@dimen/_25sdp"
+        android:paddingStart="@dimen/_15sdp"
+        android:paddingEnd="@dimen/_15sdp"
         android:text="@string/mail"
         android:textColor="@color/white"
-        android:textSize="@dimen/_12ssp"
+        android:textSize="@dimen/_15ssp"
         android:visibility="visible"
-        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        app:layout_constraintDimensionRatio="1.1"
         app:layout_constraintEnd_toStartOf="@+id/guideline4"
         app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/email_tx_input"
@@ -126,11 +139,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:visibility="visible"
-        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        app:layout_constraintDimensionRatio="1.1"
         app:layout_constraintEnd_toStartOf="@+id/guideline4"
         app:layout_constraintStart_toStartOf="@+id/guideline"
         app:layout_constraintTop_toBottomOf="@+id/txt_mail"
-        app:layout_constraintVertical_bias="0.0"
         app:startIconDrawable="@drawable/ico_mail">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -146,17 +158,16 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/_5sdp"
         android:fontFamily="@font/roboto_medium"
-        android:paddingStart="@dimen/_25sdp"
-        android:paddingEnd="@dimen/_25sdp"
+        android:paddingStart="@dimen/_15sdp"
+        android:paddingEnd="@dimen/_15sdp"
         android:text="@string/password"
         android:textColor="@color/white"
-        android:textSize="@dimen/_12ssp"
+        android:textSize="@dimen/_15ssp"
         android:visibility="visible"
-        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        app:layout_constraintDimensionRatio="1.1"
         app:layout_constraintEnd_toStartOf="@+id/guideline4"
         app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toBottomOf="@+id/email_tx_input"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/email_tx_input" />
 
 
     <com.google.android.material.textfield.TextInputLayout
@@ -165,11 +176,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:visibility="visible"
-        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        app:endIconMode="none"
+        app:layout_constraintDimensionRatio="1.1"
         app:layout_constraintEnd_toStartOf="@+id/guideline4"
         app:layout_constraintStart_toStartOf="@+id/guideline"
         app:layout_constraintTop_toBottomOf="@+id/txt_password"
-        app:layout_constraintVertical_bias="0.0"
+        app:passwordToggleEnabled="true"
         app:startIconDrawable="@drawable/ico_pass">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -185,11 +197,11 @@
         android:layout_height="@dimen/_20sdp"
         android:layout_margin="@dimen/_10sdp"
         android:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="parent"
+
+        app:layout_constraintDimensionRatio="1.1"
         app:layout_constraintEnd_toStartOf="@+id/guideline4"
         app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toBottomOf="@+id/password_tx_input"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintTop_toBottomOf="@+id/password_tx_input">
 
         <CheckBox
             android:id="@+id/remember_me_checker"
@@ -199,7 +211,6 @@
             android:layout_alignParentTop="true"
             android:layout_alignParentBottom="true"
             android:layout_marginTop="0dp"
-            android:layout_toStartOf="@+id/btn_forget_password"
             android:buttonTint="@color/blue"
             android:text="@string/remember_me"
             android:textColor="@color/white" />
@@ -214,7 +225,6 @@
             android:background="?selectableItemBackground"
             android:clickable="true"
             android:focusable="true"
-            android:fontFamily="@font/roboto_medium"
             android:gravity="center"
             android:text="@string/forget_password"
             android:textColor="@color/yellow" />
@@ -226,12 +236,11 @@
         style="@style/submitButtonStyle"
         android:text="@string/sign_in"
         android:visibility="visible"
-        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        app:layout_constraintDimensionRatio="1.1"
         app:layout_constraintEnd_toStartOf="@+id/guideline4"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toBottomOf="@+id/holder1"
-        app:layout_constraintVertical_bias="0.307" />
+        app:layout_constraintTop_toBottomOf="@+id/holder1" />
+
 
     <TextView
         android:id="@+id/textView7"
@@ -240,6 +249,7 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentBottom="true"
+        android:fontFamily="@font/roboto_medium"
         android:gravity="center"
         android:paddingStart="@dimen/_15sdp"
         android:paddingEnd="@dimen/_15sdp"
@@ -248,6 +258,7 @@
         android:textSize="@dimen/_12ssp"
         android:visibility="visible"
         app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        app:layout_constraintDimensionRatio="1.1"
         app:layout_constraintStart_toStartOf="@+id/guideline"
         app:layout_constraintTop_toBottomOf="@+id/materialButton" />
 
@@ -261,12 +272,13 @@
         android:background="?selectableItemBackground"
         android:clickable="true"
         android:focusable="true"
-        android:fontFamily="@font/roboto_medium"
+
         android:gravity="center"
         android:text="@string/create_account"
         android:textColor="@color/yellow"
         android:visibility="visible"
         app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        app:layout_constraintDimensionRatio="1.1"
         app:layout_constraintEnd_toStartOf="@+id/guideline4"
         app:layout_constraintStart_toEndOf="@+id/textView7"
         app:layout_constraintTop_toBottomOf="@+id/materialButton" />
@@ -298,6 +310,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="3dp" />
+        app:layout_constraintGuide_begin="56dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

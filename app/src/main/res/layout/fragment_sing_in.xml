@@ -8,6 +8,16 @@
     android:background="@drawable/ui_background"
     tools:context=".presentation.ui.SingInFragment">
 
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:background="@color/dark_purple"
+        style="@style/toolbarStyle"
+        android:minHeight="?attr/actionBarSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="@string/sign_in" />
+
     <!-- <ScrollView
          android:id="@+id/scrollView2"
          android:fillViewport="true"

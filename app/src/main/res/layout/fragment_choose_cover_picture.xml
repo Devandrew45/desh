@@ -6,39 +6,40 @@
     android:layout_height="match_parent"
     android:background="@drawable/ui_background">
 
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/choose_photos_tb"
+        style="@style/toolbarStyle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="@string/cover_music"
+        app:titleTextColor="@color/white" />
+
     <TextView
         android:id="@+id/choice_photo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingStart="@dimen/_15sdp"
-        android:text="Choice photo"
+        android:text="@string/choice_photo"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/albums_spinner" />
 
-
-    <!-- <com.google.android.material.appbar.MaterialToolbar
-         android:id="@+id/choose_photos_tb"
-         style="@style/toolbarStyle"
-         app:layout_constraintEnd_toEndOf="parent"
-         app:layout_constraintHorizontal_bias="0.0"
-         app:layout_constraintStart_toStartOf="parent"
-         app:layout_constraintTop_toTopOf="parent"
-         app:title="@string/cover_music"
-         app:titleTextColor="@color/white" />-->
+    <!---->
 
     <Spinner
         android:id="@+id/albums_spinner"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:gravity="center"
         android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/choose_photos_tb" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/pictures_list"
