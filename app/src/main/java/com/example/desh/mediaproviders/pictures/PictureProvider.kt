@@ -5,11 +5,8 @@ import android.content.ContentResolver
 import android.database.Cursor
 import android.net.Uri
 import android.provider.MediaStore
-import com.example.desh.mediaproviders.module.AlbumItem
-import com.example.desh.mediaproviders.module.PictureContent
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
+import com.example.desh.mediaproviders.pictures.model.AlbumItem
+import com.example.desh.mediaproviders.pictures.model.PictureContent
 
 @SuppressLint("InlinedApi")
 class PictureProvider(private val contentResolver: ContentResolver) {

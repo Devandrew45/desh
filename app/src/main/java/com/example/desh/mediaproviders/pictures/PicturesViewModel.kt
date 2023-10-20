@@ -4,10 +4,9 @@ import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
-import com.example.desh.mediaproviders.module.AlbumItem
-import com.example.desh.mediaproviders.module.PictureContent
+import com.example.desh.mediaproviders.pictures.model.AlbumItem
+import com.example.desh.mediaproviders.pictures.model.PictureContent
 import kotlinx.coroutines.CoroutineStart
-import kotlinx.coroutines.cancel
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlin.coroutines.EmptyCoroutineContext

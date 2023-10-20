@@ -1,4 +1,4 @@
-package com.example.desh.mediaproviders.module
+package com.example.desh.mediaproviders.pictures.model
 
 class pictureFolderContent {
 

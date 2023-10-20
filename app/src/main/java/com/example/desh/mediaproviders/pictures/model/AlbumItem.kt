@@ -1,4 +1,4 @@
-package com.example.desh.mediaproviders.module
+package com.example.desh.mediaproviders.pictures.model
 
 import android.os.Parcelable
 import kotlinx.android.parcel.Parcelize

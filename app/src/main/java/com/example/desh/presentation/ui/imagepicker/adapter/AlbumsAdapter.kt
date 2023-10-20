@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import com.example.desh.R
 import com.example.desh.databinding.ItemSpennirTextBinding
-import com.example.desh.mediaproviders.module.AlbumItem
+import com.example.desh.mediaproviders.pictures.model.AlbumItem
 
 internal class AlbumsAdapter(albumItems: List<AlbumItem>, context: Context) : ArrayAdapter<AlbumItem>(context, R.layout.item_spennir_text, albumItems) {
 
