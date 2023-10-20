@@ -36,4 +36,6 @@
     <string name="brief">Brief</string>
     <string name="enter_a_brief_summary_of_yourself_here">Enter a brief summary of yourself here</string>
     <string name="cover_music"><![CDATA[Cover & Music]]></string>
+    <string name="choice_music">Choice Music Profile intro\n</string>
+    <string name="go_to_studio">Go to Studio</string>
 </resources>

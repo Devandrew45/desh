@@ -13,6 +13,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+
+
       /*  val list = ArrayList<SocialItem>()
 
         list.add(SocialItem("https://cdn-icons-png.flaticon.com/512/2985/2985013.png",0))

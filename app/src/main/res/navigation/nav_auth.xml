@@ -30,7 +30,7 @@
     <fragment
         android:id="@+id/forgetPasswordFragment"
         android:name="com.example.desh.presentation.ui.ForgetPasswordFragment"
-        android:label="fragment_forget_password"
+        android:label=""
         tools:layout="@layout/fragment_forget_password" >
         <action
             android:id="@+id/action_forgetPasswordFragment_to_confirmNewPassword"
@@ -48,7 +48,7 @@
         android:id="@+id/confirmNewPassword"
         android:name="com.example.desh.presentation.ui.NewPasswordFragment"
         tools:layout="@layout/fragment_confirm_password"
-        android:label="ConfirmNewPassword" />
+        android:label="@string/new_password" />
 
     <fragment
         android:id="@+id/signUpFragment"
@@ -66,7 +66,7 @@
     <fragment
         android:id="@+id/coverPickerFragment"
         android:name="com.example.desh.presentation.ui.imagepicker.CoverPickerFragment"
-        android:label="CoverPickerFragment"
+        android:label="@string/cover_music"
         tools:layout="@layout/fragment_choose_cover_picture">
         <action
             app:enterAnim="@anim/anim_slide_in"
@@ -79,7 +79,7 @@
     <fragment
         android:id="@+id/musicPickerFragment"
         android:name="com.example.desh.presentation.ui.musicpicker.MusicPickerFragment"
-        android:label="fragment_music_picker"
+        android:label="@string/cover_music"
         tools:layout="@layout/fragment_music_picker"
         />
 

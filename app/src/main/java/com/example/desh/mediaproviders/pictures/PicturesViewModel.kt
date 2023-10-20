@@ -26,7 +26,7 @@ class PicturesViewModel(application: Application) : AndroidViewModel(application
 
     fun getPicturesByAlbum(bucketID: String) {
         viewModelScope.launch(EmptyCoroutineContext, CoroutineStart.DEFAULT) {
-            delay(1000L)
+            delay(500L)
             picturesList.postValue(pictureProvider.getAllPictureContentByBucketID(bucketID))
         }
     }

@@ -63,7 +63,6 @@
     </style>
 
     <style name="submitButtonStyle" parent="Widget.MaterialComponents.Button">
-
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">@dimen/_50sdp</item>
         <item name="android:layout_marginStart">@dimen/_12sdp</item>
@@ -78,9 +77,8 @@
 
         <item name="android:theme">@style/Theme.MaterialComponents.Light</item>
 
-        <item name="cornerRadius">@dimen/_10sdp</item>
+        <item name="cornerRadius">@dimen/_15sdp</item>
         <item name="backgroundTint">@color/yellow</item>
-
 
     </style>
 
