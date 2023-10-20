@@ -9,22 +9,23 @@
         <item name="boxStrokeWidth">1dp</item>
         <item name="boxStrokeColor">@color/yellow</item>
         <item name="boxStrokeWidthFocused">1dp</item>
-
         <item name="boxBackgroundMode">outline</item>
         <item name="boxBackgroundColor">@color/light_gray</item>
-
         <item name="boxCornerRadiusBottomEnd">@dimen/_13sdp</item>
         <item name="boxCornerRadiusBottomStart">@dimen/_13sdp</item>
         <item name="boxCornerRadiusTopEnd">@dimen/_13sdp</item>
         <item name="boxCornerRadiusTopStart">@dimen/_13sdp</item>
 
+
         <item name="cornerRadius">@dimen/_20sdp</item>
         <item name="colorOnSurface">@color/yellow</item>
         <item name="colorPrimary">@color/yellow</item>
         <item name="colorOnSecondaryFixedVariant">@color/yellow</item>
-        <item name="android:layout_marginStart">@dimen/_13sdp</item>
-        <item name="android:layout_marginEnd">@dimen/_13sdp</item>
+        <item name="android:layout_marginStart">@dimen/_16sdp</item>
+        <item name="android:layout_marginEnd">@dimen/_16sdp</item>
         <item name="android:layout_marginTop">@dimen/_8sdp</item>
+        <item name="android:layout_height">59dp</item>
+        <item name="android:layout_width">match_parent</item>
 
 
         <item name="startIconTint">@color/yellow</item>
@@ -64,9 +65,9 @@
 
     <style name="submitButtonStyle" parent="Widget.MaterialComponents.Button">
         <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">@dimen/_55sdp</item>
-        <item name="android:layout_marginStart">@dimen/_12sdp</item>
-        <item name="android:layout_marginEnd">@dimen/_12sdp</item>
+        <item name="android:layout_height">@dimen/_52sdp</item>
+        <item name="android:layout_marginStart">@dimen/_16sdp</item>
+        <item name="android:layout_marginEnd">@dimen/_16sdp</item>
         <item name="android:layout_marginTop">@dimen/_12sdp</item>
         <item name="android:fontFamily">@font/roboto_medium</item>
 

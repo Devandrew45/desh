@@ -9,36 +9,30 @@
         android:id="@+id/singInFragment"
         android:name="com.example.desh.presentation.ui.SingInFragment"
         android:label="fragment_sing_in"
-        tools:layout="@layout/fragment_sing_in" >
+        tools:layout="@layout/fragment_sing_in">
         <action
             android:id="@+id/action_singInFragment_to_forgetPasswordFragment"
             app:destination="@id/forgetPasswordFragment"
             app:enterAnim="@anim/anim_slide_in"
-            app:exitAnim="@anim/anim_alpha_out"
-            app:popEnterAnim="@anim/anim_alpha_in"
-            app:popExitAnim="@anim/anim_slide_out"/>
+            app:exitAnim="@anim/anim_alpha_out" />
 
         <action
             android:id="@+id/action_singInFragment_to_signUpFragment"
             app:destination="@id/signUpFragment"
             app:enterAnim="@anim/anim_slide_in"
-            app:exitAnim="@anim/anim_alpha_out"
-            app:popEnterAnim="@anim/anim_alpha_in"
-            app:popExitAnim="@anim/anim_slide_out"/>
+            app:exitAnim="@anim/anim_alpha_out" />
 
     </fragment>
     <fragment
         android:id="@+id/forgetPasswordFragment"
         android:name="com.example.desh.presentation.ui.ForgetPasswordFragment"
         android:label=""
-        tools:layout="@layout/fragment_forget_password" >
+        tools:layout="@layout/fragment_forget_password">
         <action
             android:id="@+id/action_forgetPasswordFragment_to_confirmNewPassword"
             app:destination="@id/confirmNewPassword"
             app:enterAnim="@anim/anim_slide_in"
-            app:exitAnim="@anim/anim_alpha_out"
-            app:popEnterAnim="@anim/anim_alpha_in"
-            app:popExitAnim="@anim/anim_slide_out"/>
+            app:exitAnim="@anim/anim_alpha_out" />
         <argument
             android:name="VerifyType"
             app:argType="com.example.desh.domain.enums.VerificationType" />
@@ -47,21 +41,19 @@
     <fragment
         android:id="@+id/confirmNewPassword"
         android:name="com.example.desh.presentation.ui.NewPasswordFragment"
-        tools:layout="@layout/fragment_confirm_password"
-        android:label="@string/new_password" />
+        android:label="@string/new_password"
+        tools:layout="@layout/fragment_confirm_password" />
 
     <fragment
         android:id="@+id/signUpFragment"
         android:name="com.example.desh.presentation.ui.SignUpFragment"
         android:label="fragment_sign_up"
-        tools:layout="@layout/fragment_sign_up" >
+        tools:layout="@layout/fragment_sign_up">
         <action
-            app:enterAnim="@anim/anim_slide_in"
-            app:exitAnim="@anim/anim_alpha_out"
-            app:popEnterAnim="@anim/anim_alpha_in"
-            app:popExitAnim="@anim/anim_slide_out"
             android:id="@+id/action_signUpFragment_to_coverPickerFragment"
-            app:destination="@id/coverPickerFragment" />
+            app:destination="@id/coverPickerFragment"
+            app:enterAnim="@anim/anim_slide_in"
+            app:exitAnim="@anim/anim_alpha_out" />
     </fragment>
     <fragment
         android:id="@+id/coverPickerFragment"
@@ -69,18 +61,15 @@
         android:label="@string/cover_music"
         tools:layout="@layout/fragment_choose_cover_picture">
         <action
-            app:enterAnim="@anim/anim_slide_in"
-            app:exitAnim="@anim/anim_alpha_out"
-            app:popEnterAnim="@anim/anim_alpha_in"
-            app:popExitAnim="@anim/anim_slide_out"
             android:id="@+id/action_coverPickerFragment_to_musicPickerFragment"
-            app:destination="@id/musicPickerFragment" />
+            app:destination="@id/musicPickerFragment"
+            app:enterAnim="@anim/anim_slide_in"
+            app:exitAnim="@anim/anim_alpha_out" />
     </fragment>
     <fragment
         android:id="@+id/musicPickerFragment"
         android:name="com.example.desh.presentation.ui.musicpicker.MusicPickerFragment"
         android:label="@string/cover_music"
-        tools:layout="@layout/fragment_music_picker"
-        />
+        tools:layout="@layout/fragment_music_picker" />
 
 </navigation>

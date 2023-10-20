@@ -50,7 +50,7 @@
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_110sdp"
+        android:layout_height="@dimen/_120sdp"
         android:importantForAccessibility="no"
         android:padding="@dimen/_17sdp"
         android:src="@drawable/desh_n_dez_logo_1"
@@ -146,6 +146,8 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/email_tx_input"
         style="@style/TextInputLayoutStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:visibility="visible"
         app:layout_constraintBottom_toTopOf="@+id/guideline3"
         app:layout_constraintDimensionRatio="1.1"
@@ -185,6 +187,9 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/password_tx_input"
         style="@style/TextInputLayoutStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
         app:endIconMode="none"
         app:layout_constraintBottom_toTopOf="@+id/guideline3"
         app:layout_constraintDimensionRatio="1.1"
@@ -252,7 +257,7 @@
         app:layout_constraintBottom_toTopOf="@+id/guideline3"
         app:layout_constraintDimensionRatio="1.1"
         app:layout_constraintEnd_toStartOf="@+id/guideline4"
-        app:layout_constraintHorizontal_bias="2"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/guideline"
         app:layout_constraintTop_toBottomOf="@+id/holder1"
         app:layout_constraintVertical_bias="0.0" />
